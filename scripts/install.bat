@@ -6,10 +6,8 @@ echo   Markdown Viewer - セットアップ
 echo ========================================
 echo.
 
-:: プロジェクトルートに移動
 cd /d "%~dp0.."
 
-:: Node.js チェック
 where node >nul 2>&1
 if %errorlevel% neq 0 (
     echo [エラー] Node.js がインストールされていません。
@@ -28,7 +26,7 @@ if %errorlevel% neq 0 (
 
 echo.
 echo [2/3] アプリをビルド中...
-call npm run make
+call npm run package
 if %errorlevel% neq 0 (
     echo [エラー] ビルドに失敗しました。
     pause

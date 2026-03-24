@@ -5,11 +5,6 @@ import { registerDialogHandlers } from './ipc/dialogHandlers';
 import { buildAppMenu } from './menu/appMenu';
 import { FileWatcherManager } from './fileSystem/fileWatcher';
 
-// Handle creating/removing shortcuts on Windows when installing/uninstalling.
-if (require('electron-squirrel-startup')) {
-  app.quit();
-}
-
 const fileWatcher = new FileWatcherManager();
 
 const createWindow = (): BrowserWindow => {
