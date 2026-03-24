@@ -1,0 +1,92 @@
+.sidebar-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 16px;
+}
+
+.sidebar-empty-content {
+  text-align: center;
+}
+
+.sidebar-empty-content p {
+  margin-bottom: 12px;
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+.open-folder-btn {
+  padding: 6px 16px;
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.open-folder-btn:hover {
+  opacity: 0.9;
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.sidebar-header {
+  padding: 8px 12px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-color);
+  flex-shrink: 0;
+}
+
+.sidebar-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+}
+
+.sidebar-tree {
+  flex: 1;
+  overflow: auto;
+}
+
+.file-tree-node {
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  font-size: 13px;
+  height: 28px;
+  color: var(--text-primary);
+}
+
+.file-tree-node:hover {
+  background: var(--hover-bg);
+}
+
+.file-tree-node.selected {
+  background: var(--selection-bg);
+}
+
+.file-tree-icon {
+  margin-right: 6px;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.file-tree-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,191 @@
+.editor-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--text-secondary);
+}
+
+.editor-empty-content {
+  text-align: center;
+}
+
+.editor-empty-content h2 {
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+  opacity: 0.6;
+}
+
+.editor-empty-content p {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.editor-empty-shortcut {
+  font-size: 12px !important;
+  opacity: 0.6;
+  font-family: monospace;
+}
+
+.editor-container {
+  flex: 1;
+  overflow: auto;
+  padding: 24px 48px;
+  font-family: var(--editor-font-family);
+  font-size: var(--editor-font-size);
+}
+
+/* Milkdown editor styles */
+.editor-container .milkdown {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.editor-container .milkdown .editor {
+  outline: none;
+}
+
+/* ProseMirror core styles */
+.editor-container .ProseMirror {
+  outline: none;
+  min-height: 300px;
+  font-family: var(--editor-font-family);
+  font-size: var(--editor-font-size);
+}
+
+.editor-container .ProseMirror p {
+  margin: 0 0 16px 0;
+  line-height: 1.6;
+}
+
+.editor-container .ProseMirror h1 {
+  font-size: 2em;
+  margin: 24px 0 16px 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.editor-container .ProseMirror h2 {
+  font-size: 1.5em;
+  margin: 20px 0 12px 0;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.editor-container .ProseMirror h3 {
+  font-size: 1.25em;
+  margin: 16px 0 8px 0;
+}
+
+.editor-container .ProseMirror h4,
+.editor-container .ProseMirror h5,
+.editor-container .ProseMirror h6 {
+  margin: 12px 0 8px 0;
+}
+
+.editor-container .ProseMirror ul,
+.editor-container .ProseMirror ol {
+  padding-left: 24px;
+  margin: 0 0 16px 0;
+}
+
+.editor-container .ProseMirror li {
+  margin: 4px 0;
+}
+
+.editor-container .ProseMirror li > p {
+  margin: 0;
+}
+
+.editor-container .ProseMirror blockquote {
+  margin: 0 0 16px 0;
+  padding: 0 16px;
+  border-left: 4px solid var(--border-color);
+  color: var(--text-secondary);
+}
+
+.editor-container .ProseMirror pre {
+  background: var(--code-bg);
+  border-radius: 6px;
+  padding: 16px;
+  overflow-x: auto;
+  margin: 0 0 16px 0;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 0.875em;
+  line-height: 1.45;
+}
+
+.editor-container .ProseMirror code {
+  background: var(--code-bg);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 0.875em;
+}
+
+.editor-container .ProseMirror pre code {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+.editor-container .ProseMirror hr {
+  border: none;
+  border-top: 2px solid var(--border-color);
+  margin: 24px 0;
+}
+
+.editor-container .ProseMirror a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.editor-container .ProseMirror a:hover {
+  text-decoration: underline;
+}
+
+.editor-container .ProseMirror img {
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+.editor-container .ProseMirror table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0 0 16px 0;
+}
+
+.editor-container .ProseMirror th,
+.editor-container .ProseMirror td {
+  border: 1px solid var(--border-color);
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.editor-container .ProseMirror th {
+  background: var(--hover-bg);
+  font-weight: 600;
+}
+
+.editor-container .ProseMirror input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+/* Selected node highlight */
+.editor-container .ProseMirror .ProseMirror-selectednode {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Placeholder when empty */
+.editor-container .ProseMirror > .is-empty::before {
+  content: '入力を開始してください...';
+  color: var(--text-secondary);
+  opacity: 0.5;
+  pointer-events: none;
+  float: left;
+  height: 0;
+}
